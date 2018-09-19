@@ -12,6 +12,7 @@
 		22C8A0162151CD0200BA4CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C8A0142151CD0200BA4CD5 /* Main.storyboard */; };
 		22C8A0182151CD0200BA4CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C8A0172151CD0200BA4CD5 /* Assets.xcassets */; };
 		22C8A01B2151CD0200BA4CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C8A0192151CD0200BA4CD5 /* LaunchScreen.storyboard */; };
+		22C8A0232151CD4B00BA4CD5 /* dog_urls.json in Resources */ = {isa = PBXBuildFile; fileRef = 22C8A0222151CD4B00BA4CD5 /* dog_urls.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		22C8A0172151CD0200BA4CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C8A01A2151CD0200BA4CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C8A01C2151CD0200BA4CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C8A0222151CD4B00BA4CD5 /* dog_urls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_urls.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				22C8A0102151CD0200BA4CD5 /* AppDelegate.swift */,
 				22C8A0122151CD0200BA4CD5 /* ViewController.swift */,
 				22C8A0142151CD0200BA4CD5 /* Main.storyboard */,
+				22C8A0222151CD4B00BA4CD5 /* dog_urls.json */,
 				22C8A0172151CD0200BA4CD5 /* Assets.xcassets */,
 				22C8A0192151CD0200BA4CD5 /* LaunchScreen.storyboard */,
 				22C8A01C2151CD0200BA4CD5 /* Info.plist */,
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C8A0232151CD4B00BA4CD5 /* dog_urls.json in Resources */,
 				22C8A01B2151CD0200BA4CD5 /* LaunchScreen.storyboard in Resources */,
 				22C8A0182151CD0200BA4CD5 /* Assets.xcassets in Resources */,
 				22C8A0162151CD0200BA4CD5 /* Main.storyboard in Resources */,
@@ -275,7 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3Y6KB76J9;
+				DEVELOPMENT_TEAM = 7DNMV5USSV;
 				INFOPLIST_FILE = DogsPhotos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberApps.DogsPhotos;
@@ -290,7 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3Y6KB76J9;
+				DEVELOPMENT_TEAM = 7DNMV5USSV;
 				INFOPLIST_FILE = DogsPhotos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberApps.DogsPhotos;
