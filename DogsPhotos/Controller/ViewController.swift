@@ -14,12 +14,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     fileprivate var dogImages = [String]()
     
+    var image = UIImage()
+    
+    var tapGesture = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         updateLayout()
         dogImages = parseFromJson()
+        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.myviewTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.view.addGestureRecognizer(tapGesture)
+        self.view.isUserInteractionEnabled = true
     }
     
     // MARK: Parse image URLs from JSON
@@ -87,9 +97,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
         
+        if dogImages != [""] {
             getImageFromUrl(dogImages[indexPath.row], imageCell.dogPhoto)
 
             imageCell.dogPhoto.image = UIImage(named: dogImages[indexPath.row])
+        
+            if let dogImage = imageCell.dogPhoto.image {
+                image = dogImage
+            }
+        }
         
         return imageCell
     }
@@ -106,6 +122,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         layout.minimumLineSpacing = 2
         
         collectionView.collectionViewLayout = layout
+    }
+    
+    // TO DO: finish methods for loading tapped image on new screen
+    
+    @objc func myviewTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue" {
+            if let otherVc: ViewController = segue.destination as? ViewController {
+            otherVc.image = image
+            }
+        }
+    }
+    
+    func photosMethod(photo: UIImage) {
+        image = photo
     }
     
 }

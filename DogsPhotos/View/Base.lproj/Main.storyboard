@@ -38,6 +38,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-g5-9Xu">
                                                     <rect key="frame" x="8" y="8" width="150" height="142"/>
+                                                    <gestureRecognizers/>
                                                     <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
                                                 </imageView>
                                             </subviews>
@@ -71,11 +72,60 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="eOP-kR-hPq" id="Abr-Z6-90O"/>
+                        <segue destination="ozK-7d-Wpb" kind="show" identifier="segue" id="4G5-yk-BNy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.80000000000001" y="-149.77511244377811"/>
+            <point key="canvasLocation" x="236" y="-151"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="NkT-i4-7Je">
+            <objects>
+                <viewController id="OOx-gw-G2D" customClass="ImageVC" customModule="DogsPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TXt-dA-wmo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJD-xK-x50">
+                                <rect key="frame" x="27" y="160" width="320" height="347"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WJD-xK-x50" firstAttribute="centerX" secondItem="TXt-dA-wmo" secondAttribute="centerX" id="cTg-Gc-CwE"/>
+                            <constraint firstItem="WJD-xK-x50" firstAttribute="centerY" secondItem="TXt-dA-wmo" secondAttribute="centerY" id="xa7-Yf-N4s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iT6-fD-4MW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image" id="dtp-a6-8AF">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="5P6-am-FNO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="WJD-xK-x50" id="bEH-TE-Mnx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cd-Cc-oEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="-152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7g6-4s-PIq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ozK-7d-Wpb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6F6-xw-Bj0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OOx-gw-G2D" kind="relationship" relationship="rootViewController" id="V5z-Kr-Kfg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJy-Bl-gU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041.5999999999999" y="-150.22488755622189"/>
         </scene>
     </scenes>
 </document>
